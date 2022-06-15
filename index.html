@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  </head>
+
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar__title">Bookshelf Apps</h1>
+    </header>
+    <main>
+      <section class="input_section">
+        <h2>Masukkan Buku Baru</h2>
+        <form id="inputBuku">
+          <div class="input">
+            <label for="inputBukuTitle">Judul</label>
+            <input id="inputBukuTitle" type="text" required />
+          </div>
+          <div class="input">
+            <label for="inputBukuAuthor">Penulis</label>
+            <input id="inputBukuAuthor" type="text" required />
+          </div>
+          <div class="input">
+            <label for="inputBukuYear">Tahun</label>
+            <input id="inputBukuYear" type="number" required />
+          </div>
+          <div class="input_inline">
+            <label for="inputBukuIsComplete">Selesai dibaca</label>
+            <input id="inputBukuIsComplete" type="checkbox" onclick="checkFinish()" />
+          </div>
+          <button id="bookSubmit" type="submit">Masukkan Buku ke Rak</button>
+        </form>
+      </section>
+
+      <div class="containerKanan">
+        <section class="search_section">
+          <h2>Cari Buku</h2>
+          <form id="searchBook">
+            <table>
+              <tr>
+                <td>
+                  <i class="material-icons">&#xe8b6;</i>
+                </td>
+                <td><input id="searchBookTitle" type="text" onkeyup="searchBook()" placeholder="Cari Buku" /></td>
+              </tr>
+            </table>
+          </form>
+        </section>
+
+        <section class="book_shelf">
+          <h2>Belum selesai dibaca</h2>
+
+          <div id="incompleteBookshelfList" class="book_list"></div>
+        </section>
+
+        <section class="book_shelf">
+          <h2>Selesai dibaca</h2>
+
+          <div id="completeBookshelfList" class="book_list"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2022 - Bookshelf Apps by Zuyyina</p>
+    </footer>
+    <script src="javascript.js"></script>
+  </body>
+</html>
